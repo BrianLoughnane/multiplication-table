@@ -1,5 +1,22 @@
-angular.module('myApp', []).controller('MultiplicationController',['$scope', 
-	function($scope) {
-		// $scope.numbers = range(1,10,1);
-		$scope.numbers = [1,2,3,4,5,6,7,8,9,10];
-}]);
+angular.module('myApp', []).controller('MultiplicationController', 
+	function($scope, $attrs) {
+		function populateNumbers(x) {
+			var numbers = [];
+			for(var i = 0; i <= x; i++) {
+				numbers[i] = i + 1;
+			}
+
+			return numbers;
+		}
+
+		$scope.compute = function (a,b) {
+			return a * b;
+		};
+
+		$scope.$watch('numberLimit', function(limit) {
+			$scope.numbers = populateNumbers(limit);
+		});
+
+		$scope.numberLimit = $attrs.initialNumberLimit || 10;
+		$scope.name = "brian";
+});
