@@ -6,61 +6,106 @@ td {
 	vertical-align: middle;
 }
 
-/*.cell {
-	-webkit-transition: opacity 0.5s linear;
-	-o-transition: opacity 0.5s linear;
-	transition: opacity 0.5s linear;
-}
-
 .cell.hover {
 	background: orange;
 	color: white;
+	cursor: pointer;
 }
 
-.cell.ng-enter {
-	opacity: 0;
-}
+/*==============================
+Opacity Animation
+==============================*/
 
-.cell.ng-enter-active {
-	opacity: 1;
-}
-
-.cell.ng-leave {
-	opacity: 1;
-}
-
-.cell.ng-leave-active {
-	opacity: 0;
-}
-
-.row {
+.cell, .row {
 	-webkit-transition: opacity 0.5s linear;
 	-o-transition: opacity 0.5s linear;
 	transition: opacity 0.5s linear;
 }
 
-.row.hover {
-	background: orange;
-	color: white;
-}
-
-.row.ng-enter {
+.cell.ng-enter, .row.ng-enter {
 	opacity: 0;
 }
 
-.row.ng-enter-active {
+.cell.ng-enter-active, .row.ng-enter-active {
 	opacity: 1;
 }
 
-.row.ng-leave {
+.cell.ng-leave, .row.ng-leave {
 	opacity: 1;
 }
 
-.row.ng-leave-active {
+.cell.ng-leave-active, .row.ng-leave-active {
 	opacity: 0;
+}
+
+.cell.ng-enter-stagger, .cell.ng-leave-stagger, .row.ng-enter-stagger, .row.ng-leave-stagger {
+	-webkit-transition-delay: 1s;
+	transition-delay: 1s;
+	-webkit-transition-duration: 0s;
+	transition-duration: 0s;
+}
+
+/*===========@keyframes==========
+
+/*.cell {
+	-webkit-transition: opacity 1s;
+	-o-transition: opacity 1s;
+	transition: opacity 1s;
 }*/
 
-.cell {
+/*.cell.ng-enter, .row.ng-enter {
+	-webkit-animation: cellEnter 1s;
+	animation: cellEnter 1s;
+}
+
+@-webkit-keyframes cellEnter {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes cellEnter {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+.cell.ng-leave, .row.ng-leave {
+	-webkit-animation: cellLeave 1s;
+	animation: cellLeave 1s;
+}
+
+@-webkit-keyframes cellLeave {
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
+	}
+}
+
+@keyframes cellLeave {
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
+	}
+}*/
+
+
+
+/*==============================
+Translate Animation
+==============================*/
+
+/*.cell, .row {
 	-webkit-transition: transform 0.5s linear;
 	-o-transition: transform 0.5s linear;
 	transition: transform 0.5s linear;
@@ -71,77 +116,119 @@ td {
 	color: white;
 }
 
-.cell.ng-enter {
-	-webkit-transform: translateX(100%);
-	transform: translateX(100%);
+.cell.ng-enter, .row.ng-enter {
+	-webkit-transform: translateY(1500px);
+	transform: translateY(1500px);
 }
 
-.cell.ng-enter.ng-enter-active {
-	-webkit-transform: translateX(0px);
-	transform: translateX(0px);
+.cell.ng-enter-active, .row.ng-enter-active {
+	-webkit-transform: translateY(0px);
+	transform: translateY(0px);
 }
 
-.cell.ng-leave {
-	-webkit-transform: translateX(0px);
-	transform: translateX(0px);
+.cell.ng-leave, .row.ng-leave {
+	-webkit-transform: translateY(0px);
+	transform: translateY(0px);
 }
 
-.cell.ng-leave.ng-leave-active {
-	-webkit-transform: translateX(100%);
-	transform: translateX(100%);
+.cell.ng-leave-active, .row.ng-leave-active {
+	-webkit-transform: translateY(1500px);
+	transform: translateY(1500px);
 }
 
 
-.row {
-	-webkit-transition: transform 0.5s linear;
-	-o-transition: transform 0.5s linear;
-	transition: transform 0.5s linear;
+/*===========@keyframes==========*/
+
+/*.cell.ng-enter, .row.ng-enter {
+	-webkit-animation: slideUp 1s linear;
+	animation: slideUp 1s linear;
 }
 
-.row.hover {
-	background: orange;
-	color: white;
+
+@-webkit-keyframes slideUp {
+	from {
+		transform: translateY(1500px);
+	}
+	to {
+		transform: translateY(0px);
+	}
 }
 
-.row.ng-enter {
-	-webkit-transform: translateX(100%);
-	transform: translateX(100%);
+@keyframes slideUp {
+	from {
+		transform: translateY(1500px);
+	}
+	to {
+		transform: translateY(0px);
+	}
 }
 
-.row.ng-enter.ng-enter-active {
-	-webkit-transform: translateX(0px);
-	transform: translateX(0px);
+.cell.ng-leave, .row.ng-leave {
+	-webkit-animation: slideDown 1s linear;
+	animation: slideDown 1s linear;
 }
 
-.row.ng-leave {
-	-webkit-transform: translateX(0px);
-	transform: translateX(0px);
+@-webkit-keyframes slideDown {
+	from {
+		transform: translateY(0px);
+	}
+	to {
+		transform: translateY(1500px);
+	}
 }
 
-.row.ng-leave.ng-leave-active {
-	-webkit-transform: translateX(100%);
-	transform: translateX(100%);
-}
+@keyframes slideDown {
+	from {
+		transform: translateY(0px);
+	}
+	to {
+		transform: translateY(1500px);
+	}
+}*/
+
+
+/*==============================
+Class Animation
+==============================*/
 
 /*.cell.hover-add {
-	-webkit-transition-duration: 0.5s;
-	transition-duration: 0.5s;
+	-webkit-transition-duration: 3s;
+	transition-duration: 3s;
 	background: red;
 	color: orange;
 }
 
 .cell.hover-add-active {
-	-webkit-transition-duration: 0.5s;
-	transition-duration: 0.5s;
 	background: yellow;
 	color: green;
 }
 
-*/
-
-/*.cell.hover-add-stagger, .cell.hover-remove-stagger {
+.cell.hover-add-stagger, .cell.hover-remove-stagger, .row.hover-add-stagger, .row.hover-remove-stagger {
 	-webkit-transition-delay: 0.5s;
 	transition-delay: 0.5s;
-	-webkit-transition-duration:0;
-	transition-duration:0;
+}*/
+
+/*===========@keyframes==========*/
+
+/*.cell.hover {
+	-webkit-animation: hover 5s linear;
+	animation: hover 2s linear;
+}
+
+@-webkit-keyframes hover {
+	from {
+		background: red;
+	}
+	to {
+		background: green;
+	}
+}
+
+@keyframes hover {
+	from {
+		background: red;
+	}
+	to {
+		background: green;
+	}
 }*/
