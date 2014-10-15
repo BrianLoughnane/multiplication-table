@@ -1,11 +1,11 @@
-angular.module('myApp', ['ngAnimate'])
-	.controller('DisplayController', function($scope) {
+var myMod = angular.module('myApp', ['ngAnimate']);
+myMod.controller('DisplayController', function($scope) {
 		// $scope.content = 'hi';
 		$scope.$on('displayData', function(event, data) {
 			$scope.content = data;
 		});
-	})
-	.controller('MultiplicationController', 
+	});
+myMod.controller('MultiplicationController', 
 	function($scope, $attrs, $rootScope) {
 		function populateNumbers(x) {
 			var numbers = [];
@@ -45,3 +45,36 @@ angular.module('myApp', ['ngAnimate'])
 
 
 	});
+// myMod.animation('.cell', function() {
+// 	return {
+// 		enter: function(el, done) {
+// 			$('.cell').css({'background': 'red'});
+// 			$('.cell').animate({'background': 'green'}, done);
+// 			return function (cancelled) {
+// 				if(cancelled) {
+// 					$('.cell').stop();
+// 				}
+// 			};
+// 		},
+// 		leave: function(el, done) { done(); },
+// 		move: function(el, done) { done(); },
+// 		beforeAddClass: function(el, className, done) { done(); },
+// 		addClass: function(el, className, done) { done(); },
+// 		beforeRemoveClass: function(el, className, done) { done(); },
+// 		removeClass: function(el, className, done) { done(); },
+// 		allowCancel: function(el, event, className) {}
+// 	};
+// });
+
+myMod.animation('.cell', function() {
+	return {
+		enter: function(element, done) {
+			jQuery(element).css({background: 'green'});
+			jQuery(element).animate({background:'red'}, done);
+		},
+		leave: function(element, done) {
+			jQuery(element).css({background: 'red'});
+			jQuery(element).animate({background: 'green'}, done);
+		}
+	};
+});

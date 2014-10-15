@@ -234,13 +234,13 @@ Translate Animation
 Class Animation
 ==============================*/
 
-.cell {
+/*.cell {
 	-webkit-transition-duration: 3s;
 	-o-transition-duration: 3s;
 	transition-duration: 3s;
 }
 
-/*.cell.hover-add, .cell.hover-remove-active {
+.cell.hover-add, .cell.hover-remove-active {
 	background: red;
 	color: orange;
 }
@@ -248,9 +248,8 @@ Class Animation
 .cell.hover-add-active, .cell.hover-remove {
 	background: yellow;
 	color: green;
-}*/
+}
 
-/*.row.hover-add-stagger, .row.hover-remove-stagger {*/
 .cell.hover-add-stagger, .cell.hover-remove-stagger, .row.hover-add-stagger, .row.hover-remove-stagger {
 	-webkit-transition-delay: 1s;
 	-o-transition-delay: 1s;
@@ -258,7 +257,7 @@ Class Animation
 	-webkit-transition-duration: 0s;
 	-o-transition-duration: 0s;
 	transition-duration: 0s;
-}
+}*/
 
 
 /*===========@keyframes==========*/
