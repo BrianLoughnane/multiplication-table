@@ -1,4 +1,4 @@
-angular.module('myApp', [])
+angular.module('myApp', ['ngAnimate'])
 	.controller('DisplayController', function($scope) {
 		// $scope.content = 'hi';
 		$scope.$on('displayData', function(event, data) {

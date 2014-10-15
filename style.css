@@ -6,17 +6,35 @@ td {
 	vertical-align: middle;
 }
 
-/*.hover {
+.cell {
+	-webkit-transition: transform 0.5s linear;
+	-o-transition: transform 0.5s linear;
+	transition: transform 0.5s linear;
+}
+
+.cell.hover {
 	background: orange;
 	color: white;
-}*/
+}
 
+.cell.ng-enter {
+	-webkit-transform: translateY(10px);
+	transform: translateY(10px);
+}
 
+.cell.ng-enter.ng-enter-active {
+	-webkit-transform: translateY(0px);
+	transform: translateY(0px);
+}
 
-.cell {
-	-webkit-transition-duration: 0.5s;
-	transition-duration: 0.5s;
-	position: relative;
+.cell.ng-leave {
+	-webkit-transform: translateY(0px);
+	transform: translateY(0px);
+}
+
+.cell.ng-leave.ng-leave-active {
+	-webkit-transform: translateY(10px);
+	transform: translateY(10px);
 }
 
 /*.cell.hover-add {
@@ -31,20 +49,13 @@ td {
 	transition-duration: 0.5s;
 	background: yellow;
 	color: green;
-}*/
-
-
-
-.cell.hover {
-	background: orange;
-	color: white;
-	-webkit-transform: rotate(360deg);
-	transform: rotate(360deg);
 }
 
-.cell.hover-add-stagger, .cell.hover-remove-stagger {
+*/
+
+/*.cell.hover-add-stagger, .cell.hover-remove-stagger {
 	-webkit-transition-delay: 0.5s;
 	transition-delay: 0.5s;
 	-webkit-transition-duration:0;
 	transition-duration:0;
-}
+}*/
