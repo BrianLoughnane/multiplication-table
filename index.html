@@ -18,7 +18,7 @@
 	<table>
 		<tr ng-repeat="numberA in numbers">
 
-			<td ng-repeat="numberB in numbers" 
+			<td class="cell" ng-repeat="numberB in numbers" 
 			ng-mouseover="setActiveFactors(numberA, numberB)"
 			ng-mouseleave="setActiveFactors(0,0)"
 			ng-class="{hover: matchesFactor(numberA, numberB)}"
