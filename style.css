@@ -129,7 +129,7 @@ Opacity Animation
 Translate Animation
 ==============================*/
 
-.cell, .row {
+/*.cell, .row {
 	-webkit-transition: transform 0.5s linear;
 	-o-transition: transform 0.5s linear;
 	transition: transform 0.5s linear;
@@ -163,7 +163,7 @@ Translate Animation
 .cell.ng-enter-stagger, .cell.ng-leave-stagger, .row.ng-enter-stagger, .row.ng-leave-stagger {
 	-webkit-transition: all 0s linear 1s;
 	transition: all 0s linear 1s;
-/*	-webkit-transition-property: all;
+	-webkit-transition-property: all;
 	-o-transition-property: all;
 	transition-property: all;
 	-webkit-transition-duration: 0s;
@@ -174,8 +174,8 @@ Translate Animation
 	transition-timing-function: linear;
 	-webkit-transition-delay: 1s;
 	-o-transition-delay: 1s;
-	transition-delay: 1s;*/
-}
+	transition-delay: 1s;
+}*/
 
 
 
@@ -234,22 +234,32 @@ Translate Animation
 Class Animation
 ==============================*/
 
-/*.cell.hover-add {
+.cell {
 	-webkit-transition-duration: 3s;
+	-o-transition-duration: 3s;
 	transition-duration: 3s;
+}
+
+/*.cell.hover-add, .cell.hover-remove-active {
 	background: red;
 	color: orange;
 }
 
-.cell.hover-add-active {
+.cell.hover-add-active, .cell.hover-remove {
 	background: yellow;
 	color: green;
+}*/
+
+/*.row.hover-add-stagger, .row.hover-remove-stagger {*/
+.cell.hover-add-stagger, .cell.hover-remove-stagger, .row.hover-add-stagger, .row.hover-remove-stagger {
+	-webkit-transition-delay: 1s;
+	-o-transition-delay: 1s;
+	transition-delay: 1s;
+	-webkit-transition-duration: 0s;
+	-o-transition-duration: 0s;
+	transition-duration: 0s;
 }
 
-.cell.hover-add-stagger, .cell.hover-remove-stagger, .row.hover-add-stagger, .row.hover-remove-stagger {
-	-webkit-transition-delay: 0.5s;
-	transition-delay: 0.5s;
-}*/
 
 /*===========@keyframes==========*/
 
