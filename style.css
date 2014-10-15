@@ -6,6 +6,60 @@ td {
 	vertical-align: middle;
 }
 
+/*.cell {
+	-webkit-transition: opacity 0.5s linear;
+	-o-transition: opacity 0.5s linear;
+	transition: opacity 0.5s linear;
+}
+
+.cell.hover {
+	background: orange;
+	color: white;
+}
+
+.cell.ng-enter {
+	opacity: 0;
+}
+
+.cell.ng-enter-active {
+	opacity: 1;
+}
+
+.cell.ng-leave {
+	opacity: 1;
+}
+
+.cell.ng-leave-active {
+	opacity: 0;
+}
+
+.row {
+	-webkit-transition: opacity 0.5s linear;
+	-o-transition: opacity 0.5s linear;
+	transition: opacity 0.5s linear;
+}
+
+.row.hover {
+	background: orange;
+	color: white;
+}
+
+.row.ng-enter {
+	opacity: 0;
+}
+
+.row.ng-enter-active {
+	opacity: 1;
+}
+
+.row.ng-leave {
+	opacity: 1;
+}
+
+.row.ng-leave-active {
+	opacity: 0;
+}*/
+
 .cell {
 	-webkit-transition: transform 0.5s linear;
 	-o-transition: transform 0.5s linear;
@@ -18,23 +72,55 @@ td {
 }
 
 .cell.ng-enter {
-	-webkit-transform: translateY(10px);
-	transform: translateY(10px);
+	-webkit-transform: translateX(100%);
+	transform: translateX(100%);
 }
 
 .cell.ng-enter.ng-enter-active {
-	-webkit-transform: translateY(0px);
-	transform: translateY(0px);
+	-webkit-transform: translateX(0px);
+	transform: translateX(0px);
 }
 
 .cell.ng-leave {
-	-webkit-transform: translateY(0px);
-	transform: translateY(0px);
+	-webkit-transform: translateX(0px);
+	transform: translateX(0px);
 }
 
 .cell.ng-leave.ng-leave-active {
-	-webkit-transform: translateY(10px);
-	transform: translateY(10px);
+	-webkit-transform: translateX(100%);
+	transform: translateX(100%);
+}
+
+
+.row {
+	-webkit-transition: transform 0.5s linear;
+	-o-transition: transform 0.5s linear;
+	transition: transform 0.5s linear;
+}
+
+.row.hover {
+	background: orange;
+	color: white;
+}
+
+.row.ng-enter {
+	-webkit-transform: translateX(100%);
+	transform: translateX(100%);
+}
+
+.row.ng-enter.ng-enter-active {
+	-webkit-transform: translateX(0px);
+	transform: translateX(0px);
+}
+
+.row.ng-leave {
+	-webkit-transform: translateX(0px);
+	transform: translateX(0px);
+}
+
+.row.ng-leave.ng-leave-active {
+	-webkit-transform: translateX(100%);
+	transform: translateX(100%);
 }
 
 /*.cell.hover-add {
