@@ -1,3 +1,27 @@
+body {
+	font-size: 2em;
+}
+
+.container {
+	width: 50%;
+	margin: auto;
+}
+
+.sayLimit, .display {
+	text-align: center;
+}
+
+input {
+	padding: 10px;
+	text-align: center;
+	font-size: 1em;
+}
+
+table {
+	display: inline-block;
+	margin: 20px 0px;
+}
+
 td {
 	border: 1px solid black;
 	width: 50px;
@@ -15,7 +39,7 @@ td {
 /*==============================
 Opacity Animation
 ==============================*/
-
+/*
 .cell, .row {
 	-webkit-transition: opacity 0.5s linear;
 	-o-transition: opacity 0.5s linear;
@@ -43,7 +67,7 @@ Opacity Animation
 	transition-delay: 1s;
 	-webkit-transition-duration: 0s;
 	transition-duration: 0s;
-}
+}*/
 
 /*===========@keyframes==========
 
@@ -105,7 +129,7 @@ Opacity Animation
 Translate Animation
 ==============================*/
 
-/*.cell, .row {
+.cell, .row {
 	-webkit-transition: transform 0.5s linear;
 	-o-transition: transform 0.5s linear;
 	transition: transform 0.5s linear;
@@ -136,8 +160,27 @@ Translate Animation
 	transform: translateY(1500px);
 }
 
+.cell.ng-enter-stagger, .cell.ng-leave-stagger, .row.ng-enter-stagger, .row.ng-leave-stagger {
+	-webkit-transition: all 0s linear 1s;
+	transition: all 0s linear 1s;
+/*	-webkit-transition-property: all;
+	-o-transition-property: all;
+	transition-property: all;
+	-webkit-transition-duration: 0s;
+	-o-transition-duration: 0s;
+	transition-duration: 0s;
+	-webkit-transition-timing-function: linear;
+	-o-transition-timing-function: linear;
+	transition-timing-function: linear;
+	-webkit-transition-delay: 1s;
+	-o-transition-delay: 1s;
+	transition-delay: 1s;*/
+}
 
-/*===========@keyframes==========*/
+
+
+
+/*===========@keyframes==========
 
 /*.cell.ng-enter, .row.ng-enter {
 	-webkit-animation: slideUp 1s linear;

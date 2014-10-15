@@ -10,12 +10,14 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-<div ng-controller="DisplayController">
+
+<div class="container">
+<div class="sayLimit" ng-controller="DisplayController">
 	<span ng-if="content">{{content}}</span>
-	<span ng-if="!content">...</span>
+	<span class="noContent" ng-if="!content">...</span>
 </div>
-<div ng-controller="MultiplicationController" initial="10">
-	<input type="integer" ng-model="numberLimit" placeholder="Enter a number">
+<div class="display" ng-controller="MultiplicationController" initial="10">
+	<input type="integer" ng-model="numberLimit" placeholder="Enter a number"><br>
 	<table>
 		<tr class="row" ng-repeat="numberA in numbers">
 
@@ -29,10 +31,11 @@
 			</td>
 		</tr>
 	</table>
-<div ng-controller="DisplayController">
-	<span ng-if="content">The value you have selected is: {{content}}</span>
-	<span ng-if="!content">You have not selected a value to display</span>
-</div>	
+	<div ng-controller="DisplayController">
+		<span ng-if="content">The value you have selected is: {{content}}</span>
+		<span ng-if="!content">You have not selected a value to display</span>
+	</div>	
+</div>
 </div>
 </body>
 </html>
