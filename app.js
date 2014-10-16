@@ -66,15 +66,53 @@ myMod.controller('MultiplicationController',
 // 	};
 // });
 
-myMod.animation('.cell', function() {
+// myMod.animation('.cell', function() {
+// 	return {
+// 		enter: function(element, done) {
+// 			jQuery(element).css({opacity: 0});
+// 			jQuery(element).animate({opacity:1}, 2000, done);
+// 		},
+// 		leave: function(element, done) {
+// 			jQuery(element).css({opacity: 1});
+// 			jQuery(element).animate({opacity: 0}, 2000, done);
+// 		}
+// 	};
+// });
+// myMod.animation('.row', function() {
+// 	return {
+// 		enter: function(element, done) {
+// 			jQuery(element).css({opacity: 0});
+// 			jQuery(element).animate({opacity: 1}, 2000, done);
+// 		},
+// 		leave: function(element, done) {
+// 			jQuery(element).css({opacity: 1});
+// 			jQuery(element).animate({opacity: 0}, 2000, done);
+// 		}
+// 	};
+// });
+
+// myMod.animation('.cell', function() {
+// 	return {
+// 		// enter: function(element, done) {
+// 		// 	jQuery(element).css({background: 'red'});
+// 		// 	jQuery(element).animate({background: 'green'}, done);
+// 		// }
+// 		// ,
+// 		// leave: function(element, done) {
+// 		// 	jQuery(element).css({background: 'green'});
+// 		// 	jQuery(element).animate({background: 'red'}, 2000, done);
+// 		// }
+// 	};
+// });
+myMod.animation('.row', function() {
 	return {
 		enter: function(element, done) {
-			jQuery(element).css({background: 'green'});
-			jQuery(element).animate({background:'red'}, done);
+			jQuery(element).css({background: 'red'});
+			jQuery(element).animate({background: 'green'}, 2000, done);
 		},
 		leave: function(element, done) {
-			jQuery(element).css({background: 'red'});
-			jQuery(element).animate({background: 'green'}, done);
+			jQuery(element).css({background: 'green'});
+			jQuery(element).animate({background: 'red'}, 2000, done);
 		}
 	};
 });

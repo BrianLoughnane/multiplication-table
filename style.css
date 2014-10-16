@@ -36,6 +36,9 @@ td {
 	cursor: pointer;
 }
 
+.cool {
+	border-radius: 50%;
+}
 /*==============================
 Opacity Animation
 ==============================*/
