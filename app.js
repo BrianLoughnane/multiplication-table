@@ -104,15 +104,15 @@ myMod.controller('MultiplicationController',
 // 		// }
 // 	};
 // });
-myMod.animation('.row', function() {
+myMod.animation('.cell', function() {
 	return {
 		enter: function(element, done) {
-			jQuery(element).css({background: 'red'});
-			jQuery(element).animate({background: 'green'}, 2000, done);
+			jQuery(element).css({'border-radius': '50px'});
+			jQuery(element).animate({'border-radius': '0px'}, 2000, done);
 		},
 		leave: function(element, done) {
-			jQuery(element).css({background: 'green'});
-			jQuery(element).animate({background: 'red'}, 2000, done);
+			jQuery(element).css({'border-radius': '0px'});
+			jQuery(element).animate({'border-radius': '50px'}, 2000, done);
 		}
 	};
 });
